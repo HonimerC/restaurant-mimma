@@ -1,0 +1,1865 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carta de Restaurant Mimma en formato libro: pastas, pollos, carnes, ensaladas, bebidas y postres. Trattoria familiar en Maturín, Monagas.">
+    <meta name="theme-color" content="#0B5C3E">
+    <title>Restaurant Mimma | Carta en libro</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Restaurant Mimma — Carta en libro">
+    <meta property="og:description" content="Pastas, pollos, carnes, ensaladas, bebidas y postres de Restaurant Mimma. Av. Rojas #201, Los Bloques, Maturín.">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23F7F1E7'/%3E%3Ccircle cx='50' cy='44' r='30' fill='%230B5C3E'/%3E%3Cpath d='M20 74h60v8H20z' fill='%23C9233B'/%3E%3Ctext x='50' y='57' font-family='Georgia,serif' font-size='34' font-weight='bold' fill='%23F7F1E7' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           RESTAURANT MIMMA — DESIGN SYSTEM
+           Trattoria familiar italiana · cálida y nostálgica
+           ============================================ */
+        :root {
+            /* Verdes de marca */
+            --brand-green: #0B5C3E;
+            --green-dark: #06412C;
+            --green-mid: #177A56;
+
+            /* Rojos y acentos cálidos */
+            --brand-red: #C9233B;
+            --red-soft: #E07283;
+            --stone: #7A6A5E;
+
+            /* Crema y papeles */
+            --cream: #F7F1E7;
+            --warm-white: #FDFAF6;
+            --oat: #EFE5D2;
+
+            /* Apoyos verdes */
+            --sage: #3E7D62;
+            --moss: #0B5C3E;
+            --leaf: #7FA98F;
+
+            /* Apoyos */
+            --terracotta: #C9233B;
+            --ink: #292929;
+
+            /* Semantic */
+            --color-primary: var(--brand-green);
+            --color-primary-deep: var(--green-dark);
+            --color-primary-light: var(--green-mid);
+            --color-secondary: var(--terracotta);
+            --color-secondary-light: #E07283;
+            --color-accent: var(--sage);
+            --color-accent-warm: var(--brand-red);
+            --color-accent-light: var(--red-soft);
+            --color-bg: var(--warm-white);
+            --color-bg-alt: var(--oat);
+            --color-surface: var(--cream);
+            --color-text: var(--ink);
+            --color-text-muted: var(--stone);
+            --color-text-on-dark: var(--cream);
+            --color-border: var(--oat);
+            --color-success: var(--moss);
+            --color-error: #9E4444;
+
+            /* Typography */
+            --font-display: 'Playfair Display', 'Alegreya', Georgia, serif;
+            --font-heading: 'Playfair Display', 'Alegreya', Georgia, serif;
+            --font-body: 'Alegreya', Georgia, serif;
+            --font-category: 'DM Sans', 'Arial Narrow', sans-serif;
+
+            /* Spacing */
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-2xl: 48px;
+
+            /* Borders */
+            --radius-sm: 6px;
+            --radius: 10px;
+            --radius-lg: 14px;
+            --radius-full: 9999px;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(60, 36, 21, 0.08);
+            --shadow: 0 4px 16px rgba(60, 36, 21, 0.12);
+            --shadow-lg: 0 12px 40px rgba(60, 36, 21, 0.18);
+
+            /* Transitions */
+            --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+            --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+            --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --transition-fast: 150ms var(--ease-out);
+            --transition: 250ms var(--ease-out);
+            --transition-slow: 400ms var(--ease-in-out);
+        }
+
+        /* ============================================
+           DARK MODE — disabled for menu (always light page colors)
+           ============================================ */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-bg: #143528;
+            }
+        }
+
+        /* ============================================
+           REDUCED MOTION
+           ============================================ */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            html { scroll-behavior: auto; }
+        }
+
+        /* ============================================
+           RESET & BASE
+           ============================================ */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            overflow: hidden;
+            height: 100vh;
+            height: 100dvh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            touch-action: pinch-zoom;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        :focus-visible {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 3px;
+        }
+
+
+        /* ============================================
+           BUTTON HOVER EFFECTS
+           ============================================ */
+        .mute-btn {
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+        .mute-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(6, 65, 44, 0.4);
+        }
+
+        /* ============================================
+           FLIP-BOOK CONTAINER
+           ============================================ */
+        .book-wrapper {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #323232;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .book-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.025;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+            background-size: 200px 200px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .book-wrapper::before { opacity: 0.04; }
+        }
+
+        /* ============================================
+           PAGE-FLIP OVERRIDES
+           ============================================ */
+        .flip-book {
+            display: none;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ============================================
+           PAGE BASE — soft flexible book pages
+           ============================================ */
+        .page {
+            background-color: #FDFAF6;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* ============================================
+           DECORATIVE CORNER FLOURISHES
+           ============================================ */
+        .page:not([data-page="cover"]):not([data-page="back-cover"])::before,
+        .page:not([data-page="cover"]):not([data-page="back-cover"])::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 1.5px solid var(--color-accent-warm);
+            opacity: 0.3;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .page:not([data-page="cover"]):not([data-page="back-cover"])::before {
+            top: 10px; left: 10px;
+            border-right: none; border-bottom: none;
+        }
+
+        .page:not([data-page="cover"]):not([data-page="back-cover"])::after {
+            bottom: 10px; right: 10px;
+            border-left: none; border-top: none;
+        }
+
+        /* ============================================
+           PAGE CONTENT WRAPPER
+           ============================================ */
+        .page-content {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 2;
+            padding: 4% 4% 6%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            pointer-events: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .page-content::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* ============================================
+           CATEGORY HEADER
+           ============================================ */
+        .page-category {
+            font-family: var(--font-category);
+            font-size: clamp(0.95rem, 3vw, 1.35rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--color-primary);
+            text-align: center;
+            padding: 14px 0 10px;
+            border-bottom: 2px solid var(--color-accent-warm);
+            margin: 0 0 14px;
+            position: relative;
+        }
+
+        /* Ornament under category */
+        .page-category-ornament {
+            display: flex;
+            justify-content: center;
+            margin-top: -1px;
+            margin-bottom: 12px;
+            opacity: 0.5;
+        }
+
+        .page-category-ornament svg {
+            width: 36px;
+            height: 36px;
+            color: var(--color-accent-warm);
+        }
+
+        /* ============================================
+           SUBCATEGORÍA (segundo bloque en una página)
+           ============================================ */
+        .page-subcategory {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-weight: 600;
+            font-size: clamp(1.15rem, 3.6vw, 1.7rem);
+            color: var(--color-primary);
+            text-align: center;
+            letter-spacing: 0.02em;
+            margin: 18px 0 4px;
+        }
+
+        .page-subcategory::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 2px;
+            background: var(--color-accent-warm);
+            opacity: 0.55;
+            margin: 8px auto 0;
+        }
+
+        .page-note {
+            font-family: var(--font-body);
+            font-style: italic;
+            font-size: clamp(0.72rem, 1.9vw, 0.9rem);
+            color: var(--color-text-muted);
+            text-align: center;
+            margin-top: 14px;
+        }
+
+        /* ============================================
+           GUARNICIONES / CONTORNOS (chips)
+           ============================================ */
+        .chip-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            padding: 4px 2% 0;
+        }
+
+        .chip {
+            font-family: var(--font-category);
+            font-size: clamp(0.68rem, 1.7vw, 0.82rem);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--color-text);
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-full);
+            padding: 7px 14px;
+        }
+
+        /* ============================================
+           TWO-COLUMN MENU GRID
+           ============================================ */
+        .menu-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding: 0 8%;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            width: 100%;
+        }
+
+        .menu-item__name {
+            font-family: var(--font-body);
+            font-size: clamp(0.92rem, 2.4vw, 1.15rem);
+            font-weight: 600;
+            color: var(--color-text);
+            line-height: 1.35;
+            white-space: normal;
+            overflow-wrap: break-word;
+            min-width: 0;
+        }
+
+        .menu-item__dots {
+            flex: 1;
+            border-bottom: 1px dotted var(--color-accent-warm);
+            min-width: 10px;
+            margin-bottom: 3px;
+            opacity: 0.5;
+        }
+
+        .menu-item__price {
+            font-family: var(--font-display);
+            font-size: clamp(0.95rem, 2.6vw, 1.2rem);
+            color: var(--color-secondary);
+            text-align: right;
+            white-space: nowrap;
+            font-weight: 400;
+        }
+
+        /* ============================================
+           COVER PAGE — same style as regular pages
+           ============================================ */
+        .page[data-page="cover"] {
+            background-color: #FDFAF6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            position: relative;
+        }
+
+        .page[data-page="cover"] .cover-frame {
+            position: absolute;
+            inset: 12px;
+            border: 1.5px solid var(--color-accent-warm);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .page[data-page="cover"] .cover-inner-frame {
+            position: absolute;
+            inset: 20px;
+            border: 0.5px solid var(--color-accent-warm);
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .cover-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 8px;
+            padding: 20px;
+        }
+
+        .cover-logo-img {
+            width: 140px;
+            height: 140px;
+            object-fit: contain;
+            border-radius: 50%;
+            border: 2px solid var(--color-accent-warm);
+            padding: 4px;
+            background: rgba(255,255,255,0.05);
+            margin-bottom: 8px;
+            margin-top: 20px;
+        }
+
+        .cover-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 8vw, 3.5rem);
+            letter-spacing: 0.06em;
+            line-height: 1.05;
+            margin-bottom: 2px;
+            font-weight: 700;
+        }
+
+        .cover-subtitle {
+            font-family: var(--font-category);
+            font-size: clamp(0.8rem, 2.8vw, 1.05rem);
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .cover-ornament {
+            width: 120px;
+            height: 40px;
+            color: var(--color-accent-warm);
+            opacity: 0.55;
+            margin: 8px 0;
+        }
+
+        .cover-tagline {
+            font-family: var(--font-body);
+            font-size: clamp(0.75rem, 2vw, 0.95rem);
+            font-style: italic;
+            opacity: 0.8;
+            margin-top: 4px;
+            letter-spacing: 0.02em;
+        }
+
+        .cover-location {
+            font-family: var(--font-category);
+            font-size: clamp(0.6rem, 1.6vw, 0.72rem);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            opacity: 0.9;
+            margin-top: 12px;
+        }
+
+        /* ============================================
+           BACK COVER — same style as regular pages
+           ============================================ */
+        .page[data-page="back-cover"] {
+            background-color: #FDFAF6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            position: relative;
+        }
+
+        .page[data-page="back-cover"] .cover-frame {
+            position: absolute;
+            inset: 12px;
+            border: 1.5px solid var(--color-accent-warm);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .back-cover-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 12px;
+        }
+
+        .back-cover-logo-img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 50%;
+            border: 1.5px solid var(--color-accent-warm);
+            padding: 3px;
+            background: rgba(255,255,255,0.05);
+            margin-top: 16px;
+        }
+
+        .back-cover-brand {
+            font-family: var(--font-display);
+            font-size: clamp(1.6rem, 6vw, 2.8rem);
+            letter-spacing: 0.08em;
+            opacity: 0.9;
+            font-weight: 700;
+        }
+
+        .back-cover-tagline {
+            font-family: var(--font-body);
+            font-size: clamp(0.8rem, 2.2vw, 1rem);
+            font-style: italic;
+            opacity: 0.85;
+            max-width: 80%;
+        }
+
+        .back-cover-divider {
+            width: 60px;
+            height: 1.5px;
+            background: var(--color-accent-warm);
+            opacity: 0.5;
+            margin: 4px 0;
+        }
+
+        .back-cover-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .back-cover-info-item {
+            font-family: var(--font-category);
+            font-size: clamp(0.65rem, 1.8vw, 0.8rem);
+            opacity: 0.95;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .back-cover-info-item svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
+        }
+
+
+        .back-cover-ornament {
+            width: 100px;
+            height: 36px;
+            color: var(--color-accent-warm);
+            opacity: 0.4;
+            margin-top: 8px;
+        }
+
+
+        /* ============================================
+           MUTE BUTTON
+           ============================================ */
+        .mute-btn {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 100;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            color: var(--color-text-on-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow), 0 0 12px rgba(60, 36, 21, 0.15);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1.5px solid var(--color-accent-warm);
+            opacity: 0.8;
+            transition: transform var(--transition-fast), opacity var(--transition-fast);
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+
+        .mute-btn:hover { transform: scale(1.1); opacity: 1; }
+        .mute-btn:active { transform: scale(0.95); }
+
+        .mute-btn svg { width: 20px; height: 20px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+        .mute-btn.is-muted { background: var(--color-text-muted); border-color: var(--color-border); }
+        .mute-btn .icon-unmuted { display: block; }
+        .mute-btn .icon-muted { display: none; }
+        .mute-btn.is-muted .icon-unmuted { display: none; }
+        .mute-btn.is-muted .icon-muted { display: block; }
+
+        /* ============================================
+           FLOATING "VOLVER" BUTTON
+           ============================================ */
+        .volver-btn {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: 10px 26px;
+            background: var(--color-primary);
+            color: var(--color-text-on-dark);
+            font-family: var(--font-category);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-radius: var(--radius-full);
+            border: 1.5px solid var(--color-accent-warm);
+            box-shadow: var(--shadow);
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            transition: transform var(--transition), box-shadow var(--transition), background-color var(--transition);
+        }
+
+        .volver-btn:hover { transform: translateX(-50%) translateY(-2px); box-shadow: var(--shadow-lg); background: var(--color-primary-deep); }
+        .volver-btn:active { transform: translateX(-50%) translateY(0) scale(0.97); }
+        .volver-btn svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+        /* ============================================
+           PAGE INDICATOR
+           ============================================ */
+        .page-indicator {
+            position: fixed;
+            left: 50%;
+            bottom: 78px;
+            transform: translateX(-50%);
+            z-index: 200;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 5px 13px;
+            background: rgba(6, 65, 44, 0.88);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(247, 241, 231, 0.25);
+            border-radius: var(--radius-full);
+            color: var(--color-text-on-dark);
+            font-family: var(--font-category);
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            pointer-events: none;
+        }
+
+        .page-indicator__current { color: var(--color-accent-light); }
+
+        /* ============================================
+           KEYBOARD HINT
+           ============================================ */
+        .keyboard-hint {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 200;
+            padding: 14px 24px;
+            background: var(--color-primary-deep);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: var(--radius);
+            border: 1px solid var(--color-accent-warm);
+            color: var(--color-text-on-dark);
+            font-family: var(--font-category);
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-align: center;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            letter-spacing: 0.03em;
+        }
+
+        .keyboard-hint.show { opacity: 0.9; }
+
+        .keyboard-hint kbd {
+            display: inline-block;
+            padding: 2px 7px;
+            background: rgba(247, 241, 231, 0.16);
+            border: 1px solid var(--color-accent-warm);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 0.75rem;
+            margin: 0 2px;
+            color: var(--color-accent-light);
+        }
+
+        /* ============================================
+           LOADING STATE
+           ============================================ */
+        .loading-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: var(--color-primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-md);
+            transition: opacity 0.5s ease;
+        }
+
+        .loading-overlay.hidden { opacity: 0; pointer-events: none; }
+
+        .loading-ornament {
+            width: 50px;
+            height: 50px;
+            color: var(--color-accent-warm);
+            animation: loadingPulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes loadingPulse {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+
+        .loading-text {
+            font-family: var(--font-category);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--color-text-on-dark);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 480px) {
+            .mute-btn { top: 12px; right: 12px; width: 38px; height: 38px; }
+            .mute-btn svg { width: 18px; height: 18px; }
+            .volver-btn { bottom: 16px; padding: 8px 20px; font-size: 0.75rem; }
+            .volver-btn svg { width: 14px; height: 14px; }
+            .page-indicator { bottom: 58px; font-size: 0.65rem; padding: 4px 10px; }
+            .menu-grid { padding: 0 6%; gap: 6px 8px; }
+            .page-content { padding: 4% 3% 8%; }
+            .cover-logo-img { width: 110px; height: 110px; }
+        }
+
+        @media (min-width: 768px) {
+            .volver-btn { bottom: 32px; padding: 12px 30px; font-size: 0.88rem; }
+            .menu-grid { padding: 0 10%; }
+            .page-content { padding: 4% 5% 6%; }
+            .cover-logo-img { width: 160px; height: 160px; }
+        }
+
+        @media (min-width: 1024px) {
+            .menu-grid { padding: 0 12%; }
+            .page-content { padding: 4% 5% 6%; }
+            .cover-logo-img { width: 180px; height: 180px; }
+        }
+
+                /* ============================================
+           CTA RESERVA POR WHATSAPP
+           ============================================ */
+        .reserva-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 22px;
+            background: var(--color-secondary);
+            color: #FDFAF6;
+            border: none;
+            border-radius: 999px;
+            font-family: var(--font-category);
+            font-size: clamp(0.75rem, 1.8vw, 0.9rem);
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+            margin-top: 12px;
+        }
+
+        .reserva-btn:hover { transform: translateY(-2px); background: var(--color-primary); box-shadow: 0 4px 16px rgba(11, 92, 62, 0.35); }
+        .reserva-btn:active { transform: translateY(0) scale(0.97); }
+        .reserva-btn svg { width: 17px; height: 17px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; pointer-events: none; }
+        /* ============================================
+           WHATSAPP FAB
+           ============================================ */
+        .wa-fab {
+            position: fixed;
+            right: 18px;
+            bottom: 20px;
+            z-index: 210;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: var(--color-success);
+            color: #FDFAF6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(6, 65, 44, 0.45);
+            transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .wa-fab:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(6, 65, 44, 0.5); }
+        .wa-fab:active { transform: translateY(0) scale(0.96); }
+        .wa-fab svg { width: 26px; height: 26px; fill: currentColor; }
+
+        /* ============================================
+           FALLBACK: sin JS o libreria no disponible
+           ============================================ */
+        body.static-mode { overflow: auto; height: auto; touch-action: auto; user-select: auto; }
+
+        body.static-mode .book-wrapper {
+            position: static;
+            display: block;
+            height: auto;
+            overflow: visible;
+            padding: 26px 16px 96px;
+        }
+
+        body.static-mode .flip-book {
+            display: block;
+            max-width: 470px;
+            margin: 0 auto;
+            box-shadow: none;
+        }
+
+        body.static-mode .page {
+            width: 100%;
+            height: auto;
+            margin-bottom: 22px;
+            box-shadow: 0 10px 34px rgba(0, 0, 0, 0.35);
+        }
+
+        body.static-mode .page-content {
+            position: relative;
+            inset: auto;
+            overflow: visible;
+            padding: 7% 7% 9%;
+        }
+
+        body.static-mode .page-indicator,
+        body.static-mode .keyboard-hint { display: none !important; }
+
+        /* Si el script nunca se ejecuta, el overlay se oculta solo */
+        .loading-overlay { animation: overlayAutoHide 0.45s ease 6s forwards; }
+
+        @keyframes overlayAutoHide {
+            to { opacity: 0; visibility: hidden; pointer-events: none; }
+        }
+/* ============================================
+           PRINT STYLES
+           ============================================ */
+        @media print {
+            .mute-btn, .volver-btn, .page-indicator, .keyboard-hint, .loading-overlay { display: none !important; }
+            .book-wrapper { position: static; overflow: visible; height: auto; padding: 0; }
+            .flip-book { display: block !important; box-shadow: none; }
+            .page { page-break-after: always; }
+            .page-content { overflow: visible; position: relative; }
+        }
+    </style>
+    <noscript>
+        <style>
+            body { overflow: auto !important; height: auto !important; touch-action: auto !important; user-select: auto !important; }
+            .book-wrapper { position: static !important; display: block !important; height: auto !important; overflow: visible !important; padding: 26px 16px 96px !important; }
+            .flip-book { display: block !important; max-width: 470px; margin: 0 auto; box-shadow: none; }
+            .page { width: 100% !important; height: auto !important; margin-bottom: 22px; box-shadow: 0 10px 34px rgba(0, 0, 0, 0.35); }
+            .page-content { position: relative !important; overflow: visible !important; padding: 7% 7% 9% !important; }
+            .page-indicator, .keyboard-hint, .mute-btn, .loading-overlay { display: none !important; }
+        </style>
+    </noscript>
+</head>
+
+<body>
+
+    <!-- Loading overlay -->
+    <div class="loading-overlay" id="loadingOverlay" aria-hidden="true">
+        <svg class="loading-ornament" viewBox="0 0 40 30" fill="none">
+            <path d="M10 28 Q8 20 12 15 Q16 10 14 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M20 28 Q18 18 22 12 Q26 6 24 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M30 28 Q28 20 32 15 Q36 10 34 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div class="loading-text">Abriendo la carta...</div>
+    </div>
+
+    <!-- Mute Toggle -->
+    <button class="mute-btn" id="muteBtn" aria-label="Activar/desactivar sonido" title="Sonido">
+        <svg class="icon-unmuted" viewBox="0 0 24 24">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+        </svg>
+        <svg class="icon-muted" viewBox="0 0 24 24">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+            <line x1="23" y1="9" x2="17" y2="15"/>
+            <line x1="17" y1="9" x2="23" y2="15"/>
+        </svg>
+    </button>
+
+    <!-- Floating WhatsApp -->
+    <a class="wa-fab" href="https://wa.me/584249330252?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Restaurant%20Mimma" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp a Restaurant Mimma">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.47-8.435"/></svg>
+    </a>
+
+    <!-- Floating Volver -->
+    <a href="index.html" class="volver-btn" id="volverBtn" aria-label="Volver al inicio">
+        <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Volver al inicio
+    </a>
+
+    <!-- Page Indicator -->
+    <div class="page-indicator" id="pageIndicator" aria-live="polite">
+        <span class="page-indicator__current" id="pageCurrent">1</span>
+        <span>/</span>
+        <span id="pageTotal">8</span>
+    </div>
+
+    <!-- Keyboard Hint -->
+    <div class="keyboard-hint" id="keyboardHint" aria-hidden="true">
+        Usa <kbd>&#8592;</kbd> <kbd>&#8594;</kbd> o desliza para pasar la hoja
+    </div>
+
+    <!-- ==========================================
+         FLIP-BOOK MENU
+         ========================================== -->
+    <div class="book-wrapper" role="main" aria-label="Carta interactiva de Restaurant Mimma">
+        <div class="flip-book" id="book">
+
+            <!-- ==========================================
+                 PAGE 1: PORTADA (COVER)
+                 ========================================== -->
+            <div class="page" data-page="cover">
+                <div class="cover-frame"></div>
+                <div class="cover-inner-frame"></div>
+                <div class="cover-content">
+                    <img src="assets/img/logo-mimma.jpg" alt="Logo de Restaurant Mimma" class="cover-logo-img" loading="eager">
+
+                    <h1 class="cover-title">MIMMA</h1>
+                    <p class="cover-subtitle">Restaurant</p>
+
+                    <!-- Ornamento: hoja de albahaca -->
+                    <svg class="cover-ornament" viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 20 Q30 8 60 20 Q90 32 110 20"/>
+                        <ellipse cx="35" cy="12" rx="9" ry="5.5" transform="rotate(-30 35 12)"/>
+                        <ellipse cx="60" cy="20" rx="9" ry="5.5"/>
+                        <ellipse cx="85" cy="28" rx="9" ry="5.5" transform="rotate(30 85 28)"/>
+                        <line x1="30" y1="14" x2="40" y2="10" opacity="0.4"/>
+                        <line x1="55" y1="20" x2="65" y2="20" opacity="0.4"/>
+                        <line x1="80" y1="26" x2="90" y2="30" opacity="0.4"/>
+                    </svg>
+
+                    <p class="cover-tagline">"Recetas de la nonna, momentos para compartir"</p>
+                    <p class="cover-location">Av. Rojas #201 &middot; Los Bloques &middot; Maturín</p>
+                </div>
+            </div>
+
+                        <!-- ==========================================
+                 PAGE 2: PASTAS
+                 ========================================== -->
+            <div class="page" data-page="content">
+                <div class="page-content">
+                    <h2 class="page-category">Pastas</h2>
+
+                    <div class="page-category-ornament">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 2v8a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V2"/>
+                            <path d="M9 12v10"/>
+                            <path d="M17 2c-1.5 2-2 4-2 6s.7 3 2 3.5V22"/>
+                        </svg>
+                    </div>
+
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <span class="menu-item__name">Pasticho</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">9$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Pasticho de berenjena</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">9$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Pasta con camarones</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">18$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Pasta Napole</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">6,5$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Pasta boloñesa</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">8$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Pasta al horno</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">9$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Pasta carbonara</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">11$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Pasta alfredo</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">11$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Pasta amatriciana</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">11$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Pasta puttanesca</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">13$</span>
+                        </div>
+                    </div>
+
+                    <p class="page-note">Pregunta por la pasta del día y las salsas de la casa.</p>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 PAGE 3: POLLOS Y SOPAS
+                 ========================================== -->
+            <div class="page" data-page="content">
+                <div class="page-content">
+                    <h2 class="page-category">Pollos</h2>
+
+                    <div class="page-category-ornament">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3v7a3 3 0 0 0 3 3h0a3 3 0 0 0 3-3V3"/>
+                            <path d="M6 13v8"/>
+                            <path d="M18 21V3c-2 1.5-3 4-3 7s1 4 3 4.5"/>
+                        </svg>
+                    </div>
+
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <span class="menu-item__name">Pollo a la plancha</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">11$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Pollo al champiñón</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">15$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Milanesa a la suiza</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">15$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Milanesa de pollo</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">11$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Cordón bleu de pollo</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">15$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Parmesana de pollo</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">15,5$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Pizzaiola de pollo</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">15$</span>
+                        </div>
+                    </div>
+
+                    <h3 class="page-subcategory">Sopas</h3>
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <span class="menu-item__name">Minestrone</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">6$</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 PAGE 4: CARNES
+                 ========================================== -->
+            <div class="page" data-page="content">
+                <div class="page-content">
+                    <h2 class="page-category">Carnes</h2>
+
+                    <div class="page-category-ornament">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3c2 3 5 4.5 5 8a5 5 0 0 1-10 0c0-3.5 3-5 5-8z"/>
+                            <path d="M12 11c.8 1.2 1.6 1.9 1.6 3a1.6 1.6 0 0 1-3.2 0c0-1.1.8-1.8 1.6-3z"/>
+                        </svg>
+                    </div>
+
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <span class="menu-item__name">Lomito al champiñón</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">18$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Lomito encebollado</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">15$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Lomito a la plancha</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">15$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Asado negro</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">13$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Milanesa de lomito</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">15$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Milanesa a la parmesana de lomito</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">18$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Milanesa a la pizzaiola de lomito</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">18$</span>
+                        </div>
+                    </div>
+
+                    <p class="page-note">Todos los platos se sirven con la guarnición de tu elección.</p>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 PAGE 5: ENSALADAS Y CONTORNOS
+                 ========================================== -->
+            <div class="page" data-page="content">
+                <div class="page-content">
+                    <h2 class="page-category">Ensaladas</h2>
+
+                    <div class="page-category-ornament">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 12h16a8 8 0 0 1-16 0z"/>
+                            <path d="M9 9c0-2 1-4 3-5"/>
+                            <path d="M13 9c1.5-1.5 4-2 6-1.5"/>
+                        </svg>
+                    </div>
+
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <span class="menu-item__name">César mixta</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">16$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">César con tocineta</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">12$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">César con pollo</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">11$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">César con lomito</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">13$</span>
+                        </div>
+                    </div>
+
+                    <h3 class="page-subcategory">Contornos</h3>
+                    <div class="chip-list">
+                        <span class="chip">Pasta</span>
+                        <span class="chip">Arroz</span>
+                        <span class="chip">Ensalada rusa</span>
+                        <span class="chip">Ensalada verde</span>
+                        <span class="chip">Tajadas</span>
+                        <span class="chip">Papas fritas</span>
+                        <span class="chip">Puré</span>
+                    </div>
+
+                    <p class="page-note">Elige la guarnición que acompaña tu plato.</p>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 PAGE 6: BEBIDAS
+                 ========================================== -->
+            <div class="page" data-page="content">
+                <div class="page-content">
+                    <h2 class="page-category">Bebidas</h2>
+
+                    <div class="page-category-ornament">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 3h12l-1.4 7.2A4.6 4.6 0 0 1 12 14a4.6 4.6 0 0 1-4.6-3.8z"/>
+                            <path d="M12 14v6"/>
+                            <path d="M8 21h8"/>
+                        </svg>
+                    </div>
+
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <span class="menu-item__name">Café</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">1,8$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Agua</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">1,4$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Limonada</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">3,5$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Lechosa</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">2$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Piña</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">3,5$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Guanábana</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">3,5$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Parchita</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">3,5$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Fresa</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">3,5$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Refresco de botella</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">1$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Refresco 1L</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">2,5$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Refresco 1,5L</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">3$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Refresco 2L</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">3,5$</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 PAGE 7: POSTRES
+                 ========================================== -->
+            <div class="page" data-page="content">
+                <div class="page-content">
+                    <h2 class="page-category">Postres</h2>
+
+                    <div class="page-category-ornament">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 21h8"/>
+                            <path d="M12 17v4"/>
+                            <path d="M7 4h10"/>
+                            <path d="M6 4c0 0-1 3-1 7 0 3 2.5 5 7 5s7-2 7-5c0-4-1-7-1-7"/>
+                            <path d="M6 8c0 0-0.5 2 0.5 4"/>
+                            <path d="M18 8c0 0 0.5 2-0.5 4"/>
+                        </svg>
+                    </div>
+
+                    <div class="menu-grid">
+                        <div class="menu-item">
+                            <span class="menu-item__name">Quesillo</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">4$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Torta de chocolate</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">6$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Torta de zanahoria</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">6$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Brookie</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">6$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Marquesa</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">6$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Tiramisú</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">6$</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item__name">Red velvet</span>
+                            <span class="menu-item__dots"></span>
+                            <span class="menu-item__price">6$</span>
+                        </div>
+                    </div>
+
+                    <p class="page-note">Pregunta por el postre del día de la nonna.</p>
+                </div>
+            </div>
+            <!-- ==========================================
+                 PAGE 8: CONTRAPORTADA
+                 ========================================== -->
+            <div class="page" data-page="back-cover">
+                <div class="cover-frame"></div>
+                <div class="back-cover-content">
+                    <img src="assets/img/logo-mimma.jpg" alt="Logo de Restaurant Mimma" class="back-cover-logo-img">
+                    <p class="back-cover-brand">Restaurant Mimma</p>
+                    <p class="back-cover-tagline">"Recetas de la nonna, momentos para compartir"</p>
+
+                    <div class="back-cover-divider"></div>
+
+                    <div class="back-cover-info">
+                        <span class="back-cover-info-item">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Av. Rojas #201, Los Bloques, Maturín
+                        </span>
+                        <span class="back-cover-info-item">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            Todos los días · 11:30 a. m. – 5:30 p. m.
+                        </span>
+                        <span class="back-cover-info-item">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                            @restaurantmimma
+                        </span>
+                        <span class="back-cover-info-item">
+                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            0424-9330252 · WhatsApp
+                        </span>
+                    </div>
+
+                    <a class="reserva-btn" href="https://wa.me/584249330252?text=Hola%2C%20quiero%20hacer%20un%20pedido%20en%20Restaurant%20Mimma" target="_blank" rel="noopener noreferrer" aria-label="Reservar o pedir por WhatsApp">
+                        <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        Reservar por WhatsApp
+                    </a>
+
+                    <!-- Ornament -->
+                    <svg class="back-cover-ornament" viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 20 Q30 8 60 20 Q90 32 110 20"/>
+                        <ellipse cx="35" cy="12" rx="9" ry="5.5" transform="rotate(-30 35 12)"/>
+                        <ellipse cx="60" cy="20" rx="9" ry="5.5"/>
+                        <ellipse cx="85" cy="28" rx="9" ry="5.5" transform="rotate(30 85 28)"/>
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Page-flip library -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+
+    <script>
+    (function () {
+        'use strict';
+
+        // State
+        var audioCtx = null;
+        var pageFlipInstance = null;
+        var currentPage = 0;
+        var totalPages = 0;
+        var isFlipping = false;
+        var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        var pageCurrentEl = document.getElementById('pageCurrent');
+        var pageTotalEl = document.getElementById('pageTotal');
+        var keyboardHint = document.getElementById('keyboardHint');
+        var loadingOverlay = document.getElementById('loadingOverlay');
+
+        // Sonido de las páginas: encendido por defecto, con control del usuario
+        var muted = false;
+        var muteBtn = document.getElementById('muteBtn');
+        try { muted = window.localStorage.getItem('mimma-muted') === '1'; } catch (err) {}
+
+        function applyMuteUI() {
+            if (!muteBtn) return;
+            muteBtn.classList.toggle('is-muted', muted);
+            muteBtn.setAttribute('aria-pressed', muted ? 'true' : 'false');
+            muteBtn.setAttribute('aria-label', muted ? 'Activar sonido de las páginas' : 'Desactivar sonido de las páginas');
+        }
+
+        if (muteBtn) {
+            muteBtn.addEventListener('click', function () {
+                muted = !muted;
+                applyMuteUI();
+                try { window.localStorage.setItem('mimma-muted', muted ? '1' : '0'); } catch (err) {}
+            });
+        }
+        applyMuteUI();
+
+        // Audio
+        function getAudioContext() {
+            if (!audioCtx) {
+                try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { return null; }
+            }
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            return audioCtx;
+        }
+
+        function createPageTurnSound(ctx) {
+            if (!ctx || prefersReducedMotion) return null;
+            try {
+                var now = ctx.currentTime;
+
+                // Layer 1: Paper swoosh (low frequency whoosh)
+                var dur = 0.35;
+                var buf = Math.floor(ctx.sampleRate * dur);
+                var data = ctx.createBuffer(1, buf, ctx.sampleRate);
+                var ch = data.getChannelData(0);
+                for (var i = 0; i < buf; i++) {
+                    var t = i / buf;
+                    var envelope = Math.sin(t * Math.PI);
+                    ch[i] = (Math.random() * 2 - 1) * envelope * 0.3;
+                }
+                var src = ctx.createBufferSource();
+                src.buffer = data;
+                var lp = ctx.createBiquadFilter();
+                lp.type = 'lowpass'; lp.frequency.value = 2000;
+                lp.frequency.setValueAtTime(2000, now);
+                lp.frequency.linearRampToValueAtTime(800, now + dur);
+                var g1 = ctx.createGain();
+                g1.gain.setValueAtTime(0, now);
+                g1.gain.linearRampToValueAtTime(0.4, now + 0.02);
+                g1.gain.setValueAtTime(0.35, now + 0.08);
+                g1.gain.exponentialRampToValueAtTime(0.001, now + dur);
+                src.connect(lp); lp.connect(g1); g1.connect(ctx.destination);
+                src.start(now); src.stop(now + dur);
+
+                // Layer 2: Paper crinkle (high frequency snaps)
+                var cDur = 0.2;
+                var cBuf = Math.floor(ctx.sampleRate * cDur);
+                var cData = ctx.createBuffer(1, cBuf, ctx.sampleRate);
+                var cCh = cData.getChannelData(0);
+                for (var j = 0; j < cBuf; j++) {
+                    var ct = j / cBuf;
+                    var cEnv = Math.sin(ct * Math.PI) * (1 - ct * 0.5);
+                    cCh[j] = Math.random() > 0.88 ? (Math.random() * 2 - 1) * 0.6 * cEnv : (Math.random() * 2 - 1) * 0.03;
+                }
+                var cSrc = ctx.createBufferSource();
+                cSrc.buffer = cData;
+                var cF = ctx.createBiquadFilter();
+                cF.type = 'bandpass'; cF.frequency.value = 4500; cF.Q.value = 0.8;
+                var cG = ctx.createGain();
+                cG.gain.setValueAtTime(0, now + 0.02);
+                cG.gain.linearRampToValueAtTime(0.25, now + 0.04);
+                cG.gain.exponentialRampToValueAtTime(0.001, now + 0.2);
+                cSrc.connect(cF); cF.connect(cG); cG.connect(ctx.destination);
+                cSrc.start(now + 0.02); cSrc.stop(now + 0.22);
+
+                // Layer 3: Soft thump (page landing)
+                var tO = ctx.createOscillator();
+                tO.type = 'sine';
+                tO.frequency.setValueAtTime(120, now + 0.15);
+                tO.frequency.exponentialRampToValueAtTime(40, now + 0.3);
+                var tG = ctx.createGain();
+                tG.gain.setValueAtTime(0, now + 0.15);
+                tG.gain.linearRampToValueAtTime(0.15, now + 0.16);
+                tG.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
+                tO.connect(tG); tG.connect(ctx.destination);
+                tO.start(now + 0.15); tO.stop(now + 0.3);
+
+                // Layer 4: Subtle mid air movement
+                var mDur = 0.3;
+                var mBuf = Math.floor(ctx.sampleRate * mDur);
+                var mData = ctx.createBuffer(1, mBuf, ctx.sampleRate);
+                var mCh = mData.getChannelData(0);
+                for (var k = 0; k < mBuf; k++) {
+                    var mt = k / mBuf;
+                    var mEnv = Math.sin(mt * Math.PI) * 0.15;
+                    mCh[k] = (Math.random() * 2 - 1) * mEnv;
+                }
+                var mSrc = ctx.createBufferSource();
+                mSrc.buffer = mData;
+                var mF = ctx.createBiquadFilter();
+                mF.type = 'bandpass'; mF.frequency.value = 1200; mF.Q.value = 0.5;
+                var mG = ctx.createGain();
+                mG.gain.setValueAtTime(0, now);
+                mG.gain.linearRampToValueAtTime(0.12, now + 0.05);
+                mG.gain.exponentialRampToValueAtTime(0.001, now + mDur);
+                mSrc.connect(mF); mF.connect(mG); mG.connect(ctx.destination);
+                mSrc.start(now); mSrc.stop(now + mDur);
+
+                return src;
+            } catch (e) { return null; }
+        }
+
+        function playPageSound() {
+            if (muted || prefersReducedMotion) return;
+            var ctx = getAudioContext();
+            if (ctx) createPageTurnSound(ctx);
+        }
+
+        function triggerHaptic() {
+            if (muted) return;
+            if ('vibrate' in navigator && !prefersReducedMotion) {
+                try { navigator.vibrate(15); } catch (e) {}
+            }
+        }
+
+        // Init book
+        function initBook() {
+            var bookElement = document.getElementById('book');
+            var pages = bookElement.querySelectorAll('.page');
+            totalPages = pages.length;
+            pageTotalEl.textContent = totalPages;
+            bookElement.style.display = 'block';
+
+            // ── Dimension calculation ─────────────────────────────────
+            // FlipHTML5 ratio: 1 page = 1 : 1.86  (378 × 702 px)
+            // Two-page spread = 2W × H
+            // Target: ~85 % of viewport width & height, dark bg visible around
+            var vw = window.innerWidth;
+            var vh = window.innerHeight;
+            var isMobile = vw < 640;
+
+            var pageW, pageH;
+            if (isMobile) {
+                // Portrait — single page fills 88 % of width
+                pageW = Math.floor(vw * 0.88);
+                pageH = Math.floor(pageW * 1.86);
+                if (pageH > vh * 0.90) {
+                    pageH = Math.floor(vh * 0.90);
+                    pageW = Math.floor(pageH / 1.86);
+                }
+            } else {
+                // Landscape — two-page spread fills 85 % of width
+                pageW = Math.floor((vw * 0.85) / 2);
+                pageH = Math.floor(pageW * 1.86);
+                if (pageH > vh * 0.90) {
+                    pageH = Math.floor(vh * 0.90);
+                    pageW = Math.floor(pageH / 1.86);
+                }
+            }
+
+            pageFlipInstance = new St.PageFlip(bookElement, {
+                width: pageW,
+                height: pageH,
+                size: 'fixed',
+                minWidth: 150,
+                maxWidth: 2400,
+                minHeight: 200,
+                maxHeight: 2000,
+                maxShadowOpacity: 0.3,
+                showCover: false,
+                mobileScrollSupport: false,
+                clickEventForward: true,
+                useMouseEvents: true,
+                swipeDistance: 30,
+                flippingTime: 500,
+                drawShadow: true,
+                autoSize: false,
+                startPage: 0,
+                startZIndex: 0,
+                usePortrait: isMobile,
+                disableClipboardEvents: false
+            });
+
+            pageFlipInstance.loadFromHTML(pages);
+
+            // Swipe más tolerante: acepta gestos más lentos sin "pegarse"
+            var bookUI = pageFlipInstance.getUI();
+            if (bookUI && typeof bookUI.swipeTimeout === 'number') bookUI.swipeTimeout = 600;
+
+            // ── Evita que el libro quede "trabado" en user_fold ──────
+            // La librería deja ese estado si start() falla al iniciar un
+            // pliegue (arrastrar adelante en la última hoja o atrás en la
+            // primera): sin esto, toques y swipes posteriores dejan de
+            // funcionar ("la página se queda pegada")
+            var flipCtrl = pageFlipInstance.getFlipController();
+            function healFold() {
+                try {
+                    if (flipCtrl.getState() === 'user_fold' && !flipCtrl.getCalculation()) {
+                        flipCtrl.reset();
+                        flipCtrl.setState('read');
+                    }
+                } catch (e) { }
+            }
+            var origFold = flipCtrl.fold.bind(flipCtrl);
+            flipCtrl.fold = function (p) { origFold(p); healFold(); };
+            var origUserStop = pageFlipInstance.userStop.bind(pageFlipInstance);
+            pageFlipInstance.userStop = function (p, f) { origUserStop(p, f); healFold(); };
+
+            // ── Tocar / click en cualquier parte de la página pasa la hoja ──
+            var distEl = bookElement.querySelector('.stf__block');
+            var tapStart = { x: 0, y: 0, t: 0 };
+            var lastTouchFlip = 0;
+
+            function isInteractive(el) {
+                return !!(el && el.closest && el.closest('a, button'));
+            }
+
+            function tapFlip(clientX, clientY, target) {
+                if (!pageFlipInstance || !distEl) return;
+                if (pageFlipInstance.isUserTouch) return;
+                healFold();
+                if (pageFlipInstance.getState() !== 'read') return;
+                if (isInteractive(target)) return;
+                if (Math.abs(clientX - tapStart.x) > 12 || Math.abs(clientY - tapStart.y) > 12) return;
+                if (Date.now() - tapStart.t > 600) return;
+                var r = distEl.getBoundingClientRect();
+                if (clientX - r.left < r.width / 2) {
+                    pageFlipInstance.flipPrev();
+                } else {
+                    pageFlipInstance.flipNext();
+                }
+            }
+
+            bookElement.addEventListener('touchstart', function (e) {
+                // Los gestos táctiles los maneja nuestro código (toque +
+                // fallback): se anula touchPoint para que la librería no
+                // active su pliegue a los 600ms (volteaba la hoja en
+                // sentido contrario al del dedo)
+                if (bookUI) bookUI.touchPoint = null;
+                if (e.touches.length === 1) {
+                    tapStart.x = e.touches[0].clientX;
+                    tapStart.y = e.touches[0].clientY;
+                    tapStart.t = Date.now();
+                }
+            }, { passive: true });
+
+            bookElement.addEventListener('touchend', function (e) {
+                if (e.changedTouches.length !== 1) return;
+                var t = e.changedTouches[0];
+                var dx = t.clientX - tapStart.x;
+                var dy = t.clientY - tapStart.y;
+                if (isInteractive(e.target)) return;
+
+                if (Math.abs(dx) <= 12 && Math.abs(dy) <= 12) {
+                    lastTouchFlip = Date.now();
+                    tapFlip(t.clientX, t.clientY, e.target);
+                    return;
+                }
+
+                // Swipe diagonal/lento que la librería pudo ignorar:
+                // se espera a que termine su animación y solo si no volteó
+                // nada, se completa el gesto del usuario
+                if (Math.abs(dx) > 30 && Math.abs(dy) < Math.abs(dx) * 2) {
+                    var goNext = dx < 0;
+                    var startIdx = pageFlipInstance.getCurrentPageIndex();
+                    var tries = 0;
+                    var checkSwipe = function () {
+                        if (!pageFlipInstance) return;
+                        healFold();
+                        if (pageFlipInstance.getState() !== 'read') {
+                            if (++tries < 20) setTimeout(checkSwipe, 80);
+                            return;
+                        }
+                        if (pageFlipInstance.getCurrentPageIndex() !== startIdx) return;
+                        if (goNext) pageFlipInstance.flipNext(); else pageFlipInstance.flipPrev();
+                    };
+                    setTimeout(checkSwipe, 40);
+                }
+            }, { passive: true });
+
+            bookElement.addEventListener('click', function (e) {
+                // Ignora el click sintético que sigue a un toque ya procesado
+                if (Date.now() - lastTouchFlip < 700) return;
+                tapStart.x = e.clientX;
+                tapStart.y = e.clientY;
+                tapStart.t = Date.now();
+                tapFlip(e.clientX, e.clientY, e.target);
+            });
+
+            // ── Debounced resize handler ──────────────────────────────
+            var lastW = vw;
+            var resizeTimer;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function () {
+                    var nvw = window.innerWidth;
+                    var nvh = window.innerHeight;
+                    // No recalcular si solo cambió el alto (barra de direcciones
+                    // del celular): evita el salto del libro al desplazarse
+                    if (Math.abs(nvw - lastW) < 2 && Math.abs(nvh - vh) < 150) return;
+                    lastW = nvw;
+                    vh = nvh;
+                    // El modo (retrato/paisaje) se mantiene el de la carga:
+                    // evita cambios de orientación al cruzar el breakpoint
+                    var portraitMode = pageFlipInstance.getSettings().usePortrait;
+                    var nPW, nPH;
+                    if (portraitMode) {
+                        nPW = Math.floor(nvw * 0.88);
+                        nPH = Math.floor(nPW * 1.86);
+                        if (nPH > nvh * 0.90) {
+                            nPH = Math.floor(nvh * 0.90);
+                            nPW = Math.floor(nPH / 1.86);
+                        }
+                    } else {
+                        nPW = Math.floor((nvw * 0.85) / 2);
+                        nPH = Math.floor(nPW * 1.86);
+                        if (nPH > nvh * 0.90) {
+                            nPH = Math.floor(nvh * 0.90);
+                            nPW = Math.floor(nPH / 1.86);
+                        }
+                    }
+                    // La librería no expone resize(): se actualizan los ajustes
+                    // y el tamaño mínimo del libro, luego se redibuja
+                    var settings = pageFlipInstance.getSettings();
+                    settings.width = nPW;
+                    settings.height = nPH;
+                    var cols = settings.usePortrait ? 1 : 2;
+                    bookElement.style.minWidth = (nPW * cols) + 'px';
+                    bookElement.style.minHeight = nPH + 'px';
+                    pageFlipInstance.update();
+                }, 300);
+            });
+
+            pageFlipInstance.on('flip', function (e) {
+                currentPage = e.data;
+                pageCurrentEl.textContent = currentPage + 1;
+
+                if (isFlipping) return;
+                isFlipping = true;
+                playPageSound();
+                triggerHaptic();
+                setTimeout(function () { isFlipping = false; }, 800);
+            });
+
+            setTimeout(function () {
+                loadingOverlay.classList.add('hidden');
+                setTimeout(function () { loadingOverlay.style.display = 'none'; }, 500);
+            }, 300);
+
+            if (!('ontouchstart' in window) && !prefersReducedMotion) {
+                setTimeout(function () {
+                    keyboardHint.classList.add('show');
+                    setTimeout(function () { keyboardHint.classList.remove('show'); }, 4000);
+                }, 1200);
+            }
+        }
+
+        // Keyboard
+        document.addEventListener('keydown', function (e) {
+            if (!pageFlipInstance) return;
+            switch (e.key) {
+                case 'ArrowRight': e.preventDefault(); pageFlipInstance.flipNext(); break;
+                case 'ArrowLeft': e.preventDefault(); pageFlipInstance.flipPrev(); break;
+            }
+        });
+
+        // Touch haptic
+        var touchStartX = 0;
+        document.addEventListener('touchstart', function (e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+        document.addEventListener('touchend', function (e) {
+            if (Math.abs(e.changedTouches[0].clientX - touchStartX) > 50) triggerHaptic();
+        }, { passive: true });
+
+        // Performance
+        var flipBookEl = document.getElementById('book');
+        if (flipBookEl) flipBookEl.style.willChange = 'transform';
+
+        // bfcache
+        window.addEventListener('pageshow', function (e) { if (e.persisted) loadingOverlay.style.display = 'none'; });
+
+        // Sin la libreria el libro se muestra como lista simple
+        function enterStaticMode() {
+            document.body.classList.add('static-mode');
+            if (loadingOverlay) {
+                loadingOverlay.classList.add('hidden');
+                window.setTimeout(function () { loadingOverlay.style.display = 'none'; }, 500);
+            }
+        }
+
+        function safeInit() {
+            try {
+                initBook();
+            } catch (err) {
+                enterStaticMode();
+            }
+        }
+
+        // Init
+        if (typeof St === 'undefined' || !St.PageFlip) {
+            enterStaticMode();
+        } else if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function () { setTimeout(safeInit, 100); });
+        } else {
+            setTimeout(safeInit, 100);
+        }
+
+        setTimeout(function () {
+            loadingOverlay.classList.add('hidden');
+            setTimeout(function () { loadingOverlay.style.display = 'none'; }, 500);
+        }, 5000);
+
+    })();
+    </script>
+</body>
+</html>

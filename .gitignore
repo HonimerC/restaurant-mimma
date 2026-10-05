@@ -1,0 +1,9 @@
+# Material interno que NO debe publicarse en GitHub Pages
+Guia de las paginas funcionales/
+Imagenes/
+
+# Sistema / temporales
+.DS_Store
+Thumbs.db
+*.tmp
+~$*

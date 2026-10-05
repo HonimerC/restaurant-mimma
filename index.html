@@ -1,0 +1,1275 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Restaurant Mimma | Recetas de la nonna en Maturín</title>
+    <meta name="description" content="Restaurant Mimma, trattoria familiar en Av. Rojas #201, Sector Los Bloques, Maturín. Pastas, carnes y recetas de la nonna para compartir. Reserva por WhatsApp.">
+    <meta name="theme-color" content="#0B5C3E">
+    <meta name="author" content="Restaurant Mimma">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Restaurant Mimma | Recetas de la nonna">
+    <meta property="og:description" content="Cocina italiana familiar, hecha con cariño y servida alrededor de la mesa. Av. Rojas #201, Los Bloques, Maturín.">
+    <meta property="og:image" content="assets/img/mesa-roja.jpg">
+    <meta property="og:locale" content="es_VE">
+    <meta property="og:url" content="https://www.instagram.com/restaurantmimma/">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23F7F1E7'/%3E%3Ccircle cx='50' cy='44' r='30' fill='%230B5C3E'/%3E%3Cpath d='M20 74h60v8H20z' fill='%23C9233B'/%3E%3Ctext x='50' y='57' font-family='Georgia,serif' font-size='34' font-weight='bold' fill='%23F7F1E7' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Restaurant Mimma",
+        "image": "assets/img/mesa-roja.jpg",
+        "servesCuisine": ["Italiana", "Trattoria", "Pasta"],
+        "priceRange": "$$",
+        "url": "https://www.instagram.com/restaurantmimma/",
+        "telephone": "+58-424-9330252",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Rojas #201, Sector Los Bloques",
+            "addressLocality": "Maturín",
+            "addressRegion": "Monagas",
+            "addressCountry": "VE"
+        },
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "11:30",
+            "closes": "17:30"
+        }],
+        "sameAs": ["https://www.instagram.com/restaurantmimma/"]
+    }
+    </script>
+
+    <style>
+        /* ============================================
+           RESTAURANT MIMMA — DESIGN SYSTEM
+           Trattoria familiar italiana · cálida y nostálgica
+           ============================================ */
+        :root {
+            --red: #C9233B;
+            --dark-red: #A9142D;
+            --wine: #7A1F2B;
+            --green: #0B5C3E;
+            --dark-green: #06412C;
+            --brand-green: #006B45;
+            --cream: #F7F1E7;
+            --paper: #EFE5D2;
+            --white: #FFFFFF;
+            --yellow: #E9B94F;
+            --gold: #D99A2B;
+            --terracotta: #B86F4F;
+            --wood: #795238;
+            --wood-light: #A47750;
+            --charcoal: #292929;
+            --ink-soft: #665E55;
+            --ink-mute: #74695D;
+
+            --shadow: 0 18px 50px rgba(41, 41, 41, 0.14);
+            --shadow-sm: 0 10px 30px rgba(121, 82, 56, 0.12);
+            --radius: 20px;
+            --radius-lg: 28px;
+
+            --serif: "Playfair Display", Georgia, serif;
+            --sans: "DM Sans", Arial, sans-serif;
+
+            --header-h: 82px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); }
+
+        body {
+            background: var(--cream);
+            color: var(--charcoal);
+            font-family: var(--sans);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        body.nav-open { overflow: hidden; }
+
+        a { color: inherit; text-decoration: none; }
+        img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        button { border: 0; background: none; cursor: pointer; font: inherit; color: inherit; }
+        ul { list-style: none; }
+
+        :focus-visible { outline: 3px solid var(--green); outline-offset: 3px; border-radius: 4px; box-shadow: 0 0 0 6px var(--yellow); }
+
+        .container { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+        .section { padding: 104px 0; position: relative; }
+
+        .eyebrow {
+            color: var(--dark-red);
+            font-size: 0.74rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .section-heading { max-width: 720px; margin-bottom: 46px; }
+        .section-heading.center { margin-left: auto; margin-right: auto; text-align: center; }
+        .section-heading h2 {
+            color: var(--dark-green);
+            font-family: var(--serif);
+            font-size: clamp(2.1rem, 4.6vw, 3.6rem);
+            line-height: 1.06;
+            margin-top: 12px;
+            font-weight: 700;
+        }
+        .section-heading p { color: var(--ink-soft); margin-top: 18px; font-size: 1.03rem; }
+        .section-heading.center p { margin-left: auto; margin-right: auto; max-width: 620px; }
+
+        /* ---------- Botones ---------- */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 50px;
+            padding: 0 24px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            transition: transform .25s ease, background .25s ease, color .25s ease, box-shadow .25s ease, border-color .25s ease;
+        }
+        .button:hover { transform: translateY(-3px); }
+        .button-primary { background: var(--red); color: var(--white); box-shadow: 0 12px 26px rgba(201, 35, 59, 0.25); }
+        .button-primary:hover { background: var(--dark-red); }
+        .button-light { background: var(--white); color: var(--dark-green); }
+        .button-light:hover { background: var(--paper); }
+        .button-outline { border: 1px solid rgba(6, 75, 55, 0.32); color: var(--dark-green); }
+        .button-outline:hover { background: var(--dark-green); color: var(--white); border-color: var(--dark-green); }
+        .button-ghost-light { border: 1px solid rgba(255, 255, 255, 0.55); color: var(--white); }
+        .button-ghost-light:hover { background: rgba(255, 255, 255, 0.14); }
+
+        /* ---------- Canto de mantel a cuadros ---------- */
+        .checkered-edge {
+            height: 12px;
+            width: 100%;
+            background-color: var(--white);
+            background-image:
+                linear-gradient(45deg, var(--red) 25%, transparent 25%),
+                linear-gradient(-45deg, var(--red) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, var(--red) 75%),
+                linear-gradient(-45deg, transparent 75%, var(--red) 75%);
+            background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+            background-size: 24px 24px;
+        }
+
+        /* ---------- Header ---------- */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 60;
+            background: rgba(247, 241, 231, 0.94);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(121, 82, 56, 0.14);
+        }
+        .nav {
+            height: var(--header-h);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .brand { display: inline-flex; align-items: center; gap: 12px; }
+        .brand-mark {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: var(--white);
+            border: 2px solid var(--red);
+            flex: 0 0 auto;
+            box-shadow: 0 4px 12px rgba(121, 82, 56, 0.18);
+        }
+        .brand-mark img { object-fit: cover; }
+        .brand-name {
+            display: block;
+            color: var(--red);
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            line-height: 1;
+        }
+        .brand-caption {
+            display: block;
+            color: var(--green);
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+        .nav-links { display: flex; align-items: center; gap: 28px; }
+        .nav-links a:not(.button) {
+            color: #584D43;
+            font-size: 0.9rem;
+            font-weight: 600;
+            position: relative;
+            padding: 4px 0;
+            transition: color .2s ease;
+        }
+        .nav-links a:not(.button)::after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: -2px;
+            height: 2px; width: 0;
+            background: var(--red);
+            transition: width .25s ease;
+        }
+        .nav-links a:not(.button):hover { color: var(--red); }
+        .nav-links a:not(.button):hover::after { width: 100%; }
+        .nav-links a.active { color: var(--red); }
+        .nav-links a.active::after { width: 100%; }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.7rem;
+            line-height: 1;
+            color: var(--dark-green);
+            padding: 6px;
+        }
+
+        /* ---------- Hero ---------- */
+        .hero {
+            position: relative;
+            min-height: min(760px, 92vh);
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            isolation: isolate;
+            background: var(--charcoal);
+        }
+        .hero-bg { position: absolute; inset: 0; z-index: -2; }
+        .hero-bg img { object-position: center 42%; }
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background:
+                linear-gradient(90deg, rgba(20, 16, 13, 0.88) 0%, rgba(20, 16, 13, 0.66) 45%, rgba(20, 16, 13, 0.32) 100%),
+                linear-gradient(180deg, rgba(20, 16, 13, 0.35) 0%, transparent 35%, rgba(20, 16, 13, 0.55) 100%);
+        }
+        .hero-content { max-width: 680px; padding: 90px 0 130px; }
+        .hero .eyebrow { color: var(--yellow); }
+        .hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(2.7rem, 7vw, 5.4rem);
+            line-height: 1.02;
+            margin: 16px 0 22px;
+            font-weight: 700;
+            text-shadow: 0 6px 30px rgba(0, 0, 0, 0.35);
+        }
+        .hero p.lead { color: rgba(255, 255, 255, 0.9); font-size: clamp(1rem, 1.7vw, 1.18rem); max-width: 540px; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+
+        .hero-meta {
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            z-index: 2;
+            background: linear-gradient(180deg, transparent, rgba(11, 92, 62, 0.92) 55%);
+            padding-top: 40px;
+        }
+        .hero-meta-inner {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px 40px;
+            align-items: center;
+            padding-bottom: 22px;
+        }
+        .hero-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.92);
+            font-weight: 500;
+        }
+        .hero-meta-item strong { color: var(--yellow); font-weight: 700; }
+        .hero-meta-item .dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--yellow); flex: 0 0 auto;
+        }
+
+        /* ---------- Historia ---------- */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .intro-copy h2 {
+            color: var(--dark-green);
+            font-family: var(--serif);
+            font-size: clamp(2.1rem, 4.6vw, 3.7rem);
+            line-height: 1.06;
+            margin: 14px 0 22px;
+        }
+        .intro-copy p { color: var(--ink-soft); max-width: 540px; }
+        .intro-copy p + p { margin-top: 16px; }
+        .intro-copy .button { margin-top: 28px; }
+
+        .signature {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .signature .line { width: 54px; height: 2px; background: var(--red); }
+        .signature span {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.12rem;
+            color: var(--green);
+        }
+
+        .image-frame {
+            position: relative;
+            border: 10px solid var(--white);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            background: var(--white);
+        }
+        .image-frame::before {
+            content: "";
+            position: absolute;
+            inset: 14px;
+            border: 1px solid rgba(201, 35, 59, 0.45);
+            z-index: 2;
+            pointer-events: none;
+        }
+        .intro-image { aspect-ratio: 4 / 5; }
+        .intro-badge {
+            position: absolute;
+            z-index: 3;
+            right: -22px;
+            bottom: -22px;
+            width: 138px;
+            height: 138px;
+            border-radius: 50%;
+            background: var(--green);
+            color: var(--white);
+            display: grid;
+            place-content: center;
+            text-align: center;
+            border: 4px solid var(--cream);
+            box-shadow: var(--shadow-sm);
+            padding: 10px;
+        }
+        .intro-badge b { font-family: var(--serif); font-size: 1.05rem; line-height: 1.15; display: block; }
+        .intro-badge small { font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.85; }
+
+        /* ---------- Sabores ---------- */
+        .flavours { background: var(--paper); }
+        .flavour-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .flavour-card {
+            background: var(--cream);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform .3s ease, box-shadow .3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .flavour-card:hover { transform: translateY(-8px); box-shadow: 0 22px 46px rgba(121, 82, 56, 0.2); }
+        .flavour-card-media { aspect-ratio: 4 / 3; overflow: hidden; }
+        .flavour-card-media img { transition: transform .6s ease; }
+        .flavour-card:hover .flavour-card-media img { transform: scale(1.07); }
+        .flavour-card-body { padding: 26px 26px 30px; flex: 1; }
+        .flavour-card:nth-child(1) .flavour-card-body { border-top: 5px solid var(--red); }
+        .flavour-card:nth-child(2) .flavour-card-body { border-top: 5px solid var(--green); }
+        .flavour-card:nth-child(3) .flavour-card-body { border-top: 5px solid var(--yellow); }
+        .flavour-card h3 {
+            color: var(--dark-green);
+            font-family: var(--serif);
+            font-size: 1.5rem;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+        .flavour-card p { color: var(--ink-mute); font-size: 0.95rem; }
+        .flavour-tag {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--dark-red);
+        }
+
+        /* ---------- Menú ---------- */
+        .menu-section { background: var(--cream); }
+        .menu-shell {
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            padding: 46px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+        }
+        .menu-shell::after {
+            content: "";
+            position: absolute;
+            right: -90px; top: -90px;
+            width: 240px; height: 240px;
+            border: 2px dashed rgba(201, 35, 59, 0.22);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .menu-top {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 26px;
+            position: relative;
+            z-index: 1;
+        }
+        .menu-top h3 {
+            color: var(--dark-green);
+            font-family: var(--serif);
+            font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+            line-height: 1.1;
+            margin-top: 10px;
+        }
+        .menu-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            background: rgba(247, 241, 231, 0.7);
+            padding: 6px;
+            border-radius: 999px;
+        }
+        .menu-tab {
+            padding: 10px 20px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.88rem;
+            color: var(--ink-mute);
+            transition: background .2s ease, color .2s ease;
+            white-space: nowrap;
+        }
+        .menu-tab:hover { color: var(--red); }
+        .menu-tab.active { background: var(--red); color: var(--white); box-shadow: 0 8px 18px rgba(201, 35, 59, 0.24); }
+
+        .menu-list { display: grid; gap: 4px; position: relative; z-index: 1; }
+        .menu-item {
+            display: flex;
+            align-items: baseline;
+            gap: 14px;
+            background: rgba(247, 241, 231, 0.75);
+            border-left: 4px solid var(--green);
+            padding: 15px 20px;
+            transition: background .2s ease, transform .2s ease;
+        }
+        .menu-item:hover { background: var(--white); transform: translateX(4px); }
+        .menu-item__name { color: var(--dark-green); font-family: var(--serif); font-size: 1.12rem; font-weight: 600; }
+        .menu-item__desc { color: var(--ink-mute); font-size: 0.86rem; display: block; margin-top: 2px; }
+        .menu-item__fill { flex: 1; border-bottom: 1px dotted rgba(121, 82, 56, 0.4); min-width: 20px; margin-bottom: 5px; }
+        .menu-item__price { color: var(--red); font-weight: 700; font-size: 1rem; white-space: nowrap; }
+
+        .menu-foot {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+            margin-top: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        .menu-foot p { color: var(--ink-soft); font-size: 0.92rem; max-width: 440px; }
+
+        /* ---------- Comunidad ---------- */
+        .community { background: var(--dark-green); color: var(--white); overflow: hidden; }
+        .community::before {
+            content: "";
+            position: absolute;
+            right: -220px; top: -210px;
+            width: 520px; height: 520px;
+            border: 1px solid rgba(233, 185, 79, 0.35);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .community .eyebrow { color: var(--yellow); }
+        .community-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .community h2 {
+            font-family: var(--serif);
+            font-size: clamp(2.1rem, 4.6vw, 3.7rem);
+            line-height: 1.05;
+            margin: 14px 0 20px;
+        }
+        .community p { color: rgba(255, 255, 255, 0.8); }
+        .community .button { margin-top: 28px; }
+
+        .photo-collage {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 168px;
+            gap: 14px;
+        }
+        .collage-item { overflow: hidden; position: relative; background: rgba(255, 255, 255, 0.08); }
+        .collage-item.tall { grid-row: span 2; }
+        .collage-item.wide { grid-column: span 2; }
+        .collage-item img { transition: transform .6s ease; }
+        .collage-item:hover img { transform: scale(1.07); }
+        .collage-item::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+            pointer-events: none;
+        }
+
+        /* ---------- Visítanos ---------- */
+        .visit-section { background: var(--paper); }
+        .visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+        .visit-copy h2 {
+            color: var(--dark-green);
+            font-family: var(--serif);
+            font-size: clamp(2.1rem, 4.6vw, 3.6rem);
+            line-height: 1.05;
+            margin: 14px 0 20px;
+        }
+        .visit-copy > p { color: var(--ink-soft); max-width: 520px; }
+
+        .contact-list { display: grid; gap: 16px; margin-top: 30px; }
+        .contact-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            background: var(--cream);
+            border: 1px solid rgba(121, 82, 56, 0.14);
+            padding: 16px 18px;
+            border-radius: 14px;
+        }
+        .contact-icon {
+            flex: 0 0 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--red);
+            color: var(--white);
+            display: grid;
+            place-content: center;
+        }
+        .contact-icon svg { width: 19px; height: 19px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+        .contact-item strong { display: block; color: var(--dark-green); font-size: 0.95rem; }
+        .contact-item span { color: var(--ink-mute); font-size: 0.92rem; }
+        .contact-item a { color: var(--red); font-weight: 600; }
+
+        .visit-card {
+            position: relative;
+            background: var(--dark-green);
+            color: var(--white);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        .visit-card-media { aspect-ratio: 16 / 10; position: relative; }
+        .visit-card-media::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(6, 65, 44, 0.1), rgba(6, 65, 44, 0.75));
+        }
+        .visit-card-body { padding: 30px 34px 36px; position: relative; }
+        .visit-card::before {
+            content: "";
+            position: absolute;
+            inset: 14px;
+            border: 1px solid rgba(233, 185, 79, 0.4);
+            z-index: 2;
+            pointer-events: none;
+        }
+        .visit-card h3 { font-family: var(--serif); font-size: 1.9rem; line-height: 1.1; margin-bottom: 12px; }
+        .visit-card p { color: rgba(255, 255, 255, 0.78); font-size: 0.95rem; margin-bottom: 22px; }
+        .visit-card .button { width: 100%; }
+        .visit-card .card-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        .visit-card .card-links a {
+            flex: 1;
+            min-width: 130px;
+            text-align: center;
+            padding: 12px 14px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 999px;
+            font-size: 0.84rem;
+            font-weight: 600;
+            transition: background .2s ease;
+        }
+        .visit-card .card-links a:hover { background: rgba(255, 255, 255, 0.14); }
+
+        /* ---------- Footer ---------- */
+        .site-footer { background: #143528; color: var(--white); padding: 60px 0 26px; }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .footer-brand .brand-name { color: var(--white); }
+        .footer-brand .brand-caption { color: var(--yellow); }
+        .footer-description { color: rgba(255, 255, 255, 0.7); margin-top: 18px; max-width: 340px; font-size: 0.95rem; }
+        .footer-column h4 {
+            color: var(--yellow);
+            font-size: 0.74rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .footer-column a, .footer-column p {
+            display: block;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.92rem;
+            margin-bottom: 10px;
+            transition: color .2s ease;
+        }
+        .footer-column a:hover { color: var(--white); }
+        .footer-bottom {
+            margin-top: 46px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.14);
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 0.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+            justify-content: space-between;
+        }
+
+        /* ---------- Fabs ---------- */
+        .whatsapp-fab {
+            position: fixed;
+            right: 22px;
+            bottom: 84px;
+            z-index: 55;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #fff;
+            display: grid;
+            place-content: center;
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+            transition: transform .25s ease;
+        }
+        .whatsapp-fab:hover { transform: scale(1.08) translateY(-2px); }
+        .whatsapp-fab svg { width: 28px; height: 28px; fill: currentColor; }
+
+        .back-to-top {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 55;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--red);
+            color: var(--white);
+            display: grid;
+            place-content: center;
+            font-size: 1.1rem;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: opacity .25s ease, transform .25s ease, background .25s ease;
+            box-shadow: 0 12px 26px rgba(201, 35, 59, 0.3);
+        }
+        .back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        .back-to-top:hover { background: var(--dark-red); }
+
+        /* ---------- Animaciones ---------- */
+        .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ---------- Tablet ---------- */
+        @media (max-width: 980px) {
+            .nav-links {
+                position: absolute;
+                top: var(--header-h);
+                left: 0; right: 0;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 4px;
+                background: var(--cream);
+                border-bottom: 1px solid rgba(121, 82, 56, 0.16);
+                padding: 16px 20px 26px;
+                box-shadow: 0 24px 40px rgba(41, 41, 41, 0.12);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links a:not(.button) { padding: 12px 4px; font-size: 1rem; border-bottom: 1px solid rgba(121, 82, 56, 0.1); }
+            .nav-links a:not(.button)::after { display: none; }
+            .nav-links .button { margin-top: 14px; width: 100%; }
+            .mobile-toggle { display: block; }
+
+            .intro-grid, .community-grid, .visit-grid { grid-template-columns: 1fr; gap: 42px; }
+            .intro-image { aspect-ratio: 16 / 11; }
+            .intro-badge { right: 18px; bottom: -18px; width: 116px; height: 116px; }
+            .flavour-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .footer-brand { grid-column: 1 / -1; }
+            .menu-shell { padding: 32px 24px; }
+        }
+
+        /* ---------- Móvil ---------- */
+        @media (max-width: 640px) {
+            .container { width: calc(100% - 28px); }
+            .section { padding: 72px 0; }
+            .hero { min-height: 640px; }
+            .hero-content { padding: 70px 0 215px; }
+            .hero-actions { flex-direction: column; align-items: stretch; }
+            .hero-actions .button { width: 100%; }
+            .hero-meta-inner { gap: 10px; flex-direction: column; align-items: flex-start; }
+            .flavour-grid { grid-template-columns: 1fr; }
+            .photo-collage { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 132px; }
+            .collage-item.wide { grid-column: span 2; }
+            .menu-top { flex-direction: column; align-items: stretch; }
+            .menu-tabs { overflow-x: auto; flex-wrap: nowrap; border-radius: 16px; }
+            .menu-item { flex-wrap: wrap; gap: 6px; padding: 14px 16px; }
+            .menu-item__fill { display: none; }
+            .menu-item__price { margin-left: auto; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; }
+            .whatsapp-fab { right: 16px; bottom: 76px; width: 52px; height: 52px; }
+            .back-to-top { right: 16px; bottom: 16px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: .01ms !important;
+                transition-duration: .01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .reveal { opacity: 1; transform: none; }
+        }
+    </style>
+    <noscript>
+        <style>
+            .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+        </style>
+    </noscript></head>
+
+<body>
+    <div class="checkered-edge" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav" aria-label="Navegación principal">
+                <a href="#inicio" class="brand" aria-label="Restaurant Mimma, ir al inicio">
+                    <span class="brand-mark"><img src="assets/img/logo-mimma.jpg" alt="Logo de Restaurant Mimma" width="50" height="50"></span>
+                    <span>
+                        <span class="brand-name">MIMMA</span>
+                        <span class="brand-caption">Restaurant</span>
+                    </span>
+                </a>
+
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mainNav">&#9776;</button>
+
+                <div class="nav-links" id="mainNav">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#historia">Nuestra historia</a>
+                    <a href="#sabores">Sabores</a>
+                    <a href="#menu">Menú</a>
+                    <a href="#comunidad">Comunidad</a>
+                    <a href="#visitanos">Visítanos</a>
+                    <a class="button button-primary" href="https://wa.me/584249330252" target="_blank" rel="noopener">Reservar</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="inicio">
+            <div class="hero-bg">
+                <img src="assets/img/mesa-roja.jpg" alt="Familia compartiendo una comida en las mesas a cuadros de Restaurant Mimma" fetchpriority="high">
+            </div>
+
+            <div class="container">
+                <div class="hero-content reveal">
+                    <span class="eyebrow">Trattoria familiar · Maturín</span>
+                    <h1>Recetas de la nonna, momentos para compartir</h1>
+                    <p class="lead">Cocina italiana tradicional, hecha con cariño y servida alrededor de la mesa. Pastas, carnes y sobremesas que saben a casa.</p>
+                    <div class="hero-actions">
+                        <a href="#menu" class="button button-primary">Ver el menú <span aria-hidden="true">&rarr;</span></a>
+                        <a href="menu.html" class="button button-light">Abrir la carta en libro</a>
+                        <a href="https://wa.me/584249330252" target="_blank" rel="noopener" class="button button-ghost-light">Reservar por WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-meta">
+                <div class="container">
+                    <div class="hero-meta-inner reveal">
+                        <span class="hero-meta-item"><span class="dot"></span><strong>Horario:</strong> todos los días, 11:30 a. m. – 5:30 p. m.</span>
+                        <span class="hero-meta-item"><span class="dot"></span><strong>Dirección:</strong> Av. Rojas #201, Sector Los Bloques, Maturín</span>
+                        <span class="hero-meta-item"><span class="dot"></span><strong>Reservas:</strong> 0424-9330252</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ HISTORIA ============ -->
+        <section class="section" id="historia">
+            <div class="container">
+                <div class="intro-grid">
+                    <div class="intro-copy reveal">
+                        <span class="eyebrow">Nuestra esencia</span>
+                        <h2>Una mesa llena siempre cuenta una historia</h2>
+                        <p>En Mimma creemos que la comida italiana se disfruta mejor cuando se comparte. Nuestra identidad nace de las recetas heredadas, los sabores de casa y ese momento especial en el que todos se reúnen alrededor de la mesa.</p>
+                        <p>Somos una trattoria familiar, cercana y generosa, inspirada en la cocina de la nonna y en el placer de hacer sentir a cada persona como en casa: platos abundantes, manteles a cuadros y tiempo para conversar.</p>
+                        <div class="signature">
+                            <span class="line" aria-hidden="true"></span>
+                            <span>“Recetas de la nonna”</span>
+                        </div>
+                        <a href="#sabores" class="button button-outline">Conocer nuestros sabores</a>
+                    </div>
+
+                    <div class="intro-image reveal">
+                        <div class="image-frame">
+                            <img src="assets/img/familia-1.jpg" alt="Clientes de Restaurant Mimma sonriendo durante su comida">
+                        </div>
+                        <div class="intro-badge" aria-hidden="true">
+                            <b>Desde la cocina de la nonna</b>
+                            <small>Maturín · Monagas</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SABORES ============ -->
+        <section class="section flavours" id="sabores">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">La experiencia Mimma</span>
+                    <h2>Los sabores de Mimma</h2>
+                    <p>Platos para disfrutar sin prisa, conversaciones que se alargan y momentos que merecen celebrarse.</p>
+                </div>
+
+                <div class="flavour-grid">
+                    <article class="flavour-card reveal">
+                        <div class="flavour-card-media">
+                            <img src="assets/img/carbonara.jpg" alt="Pasta carbonara recién servida en Mimma" loading="lazy">
+                        </div>
+                        <div class="flavour-card-body">
+                            <h3>Pasta hecha para compartir</h3>
+                            <p>Carbonara, Alfredo, Puttanesca o la pasta con camarones: porciones generosas que invitan a pasar el plato una vez más.</p>
+                            <span class="flavour-tag">Pastas desde 6,5$</span>
+                        </div>
+                    </article>
+
+                    <article class="flavour-card reveal">
+                        <div class="flavour-card-media">
+                            <img src="assets/img/milanesa-1.jpg" alt="Milanesa napolitana con papas fritas servida en Mimma" loading="lazy">
+                        </div>
+                        <div class="flavour-card-body">
+                            <h3>Platos que saben a casa</h3>
+                            <p>Milanesa napolitana, lomito al champiñón, asado negro y pollo parmensano: recetas reconocibles, servidas con generosidad.</p>
+                            <span class="flavour-tag">Favoritos de la casa</span>
+                        </div>
+                    </article>
+
+                    <article class="flavour-card reveal">
+                        <div class="flavour-card-media">
+                            <img src="assets/img/mesa-roja.jpg" alt="Familia celebrando en una mesa con mantel a cuadros" loading="lazy">
+                        </div>
+                        <div class="flavour-card-body">
+                            <h3>Momentos que se celebran</h3>
+                            <p>Cumpleaños, reuniones familiares y sobremesas largas. Aquí la comida sabe mejor cuando se comparte.</p>
+                            <span class="flavour-tag">Familias y celebraciones</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ MENÚ ============ -->
+        <section class="section menu-section" id="menu">
+            <div class="container">
+                <div class="section-heading center reveal">
+                    <span class="eyebrow">Una carta para compartir</span>
+                    <h2>Sabores que empiezan en la cocina</h2>
+                    <p>Un adelanto de nuestra carta. Explora las categorías y abre el menú completo en formato libro.</p>
+                </div>
+
+                <div class="menu-shell reveal">
+                    <div class="menu-top">
+                        <div>
+                            <span class="eyebrow">Categoría</span>
+                            <h3 id="menuTitle">Pastas</h3>
+                        </div>
+                        <div class="menu-tabs" role="tablist" aria-label="Categorías del menú">
+                            <button class="menu-tab active" role="tab" aria-selected="true" aria-controls="menuList" data-category="pastas">Pastas</button>
+                            <button class="menu-tab" role="tab" aria-selected="false" aria-controls="menuList" data-category="pollos">Pollos</button>
+                            <button class="menu-tab" role="tab" aria-selected="false" aria-controls="menuList" data-category="carnes">Carnes</button>
+                            <button class="menu-tab" role="tab" aria-selected="false" aria-controls="menuList" data-category="postres">Postres</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-list" id="menuList" role="tabpanel" aria-live="polite"></div>
+
+                    <div class="menu-foot">
+                        <p>Precios en dólares. Consulta disponibilidad y el menú del día directamente con nosotros.</p>
+                        <a href="menu.html" class="button button-primary">Abrir la carta completa <span aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ COMUNIDAD ============ -->
+        <section class="section community" id="comunidad">
+            <div class="container">
+                <div class="community-grid">
+                    <div class="reveal">
+                        <span class="eyebrow">La familia Mimma</span>
+                        <h2>Aquí la comida sabe mejor cuando se comparte.</h2>
+                        <p>Cada mesa tiene su propia historia. Familias, amigos, celebraciones y encuentros forman parte de lo que somos. Ven con hambre, con historias y con ganas de quedarte.</p>
+                        <a href="https://www.instagram.com/restaurantmimma/" target="_blank" rel="noopener" class="button button-light">Ver Instagram</a>
+                    </div>
+
+                    <div class="photo-collage reveal">
+                        <div class="collage-item tall">
+                            <img src="assets/img/familia-3.jpg" alt="Comensales riendo en una mesa de Mimma" loading="lazy">
+                        </div>
+                        <div class="collage-item wide">
+                            <img src="assets/img/camarones-plato.jpg" alt="Plato de camarones con puré y ensalada" loading="lazy">
+                        </div>
+                        <div class="collage-item">
+                            <img src="assets/img/familia-2.jpg" alt="Amigos compartiendo la comida en Mimma" loading="lazy">
+                        </div>
+                        <div class="collage-item">
+                            <img src="assets/img/camarones-ajillo.jpg" alt="Camarones al ajillo recién servidos" loading="lazy">
+                        </div>
+                        <div class="collage-item wide">
+                            <img src="assets/img/pasta-cremosa.jpg" alt="Pasta cremosa servida en Mimma" loading="lazy">
+                        </div>
+                        <div class="collage-item">
+                            <img src="assets/img/milanesa-2.jpg" alt="Milanesa napolitana con papas fritas" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ VISÍTANOS ============ -->
+        <section class="section visit-section" id="visitanos">
+            <div class="container">
+                <div class="visit-grid">
+                    <div class="visit-copy reveal">
+                        <span class="eyebrow">Te esperamos</span>
+                        <h2>Ven a sentirte en casa</h2>
+                        <p>Acércate a compartir una comida, celebrar una ocasión especial o simplemente disfrutar de una receta con sabor familiar.</p>
+
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <span class="contact-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                </span>
+                                <div>
+                                    <strong>Ubicación</strong>
+                                    <span>Av. Rojas #201, Sector Los Bloques, Maturín – Edo. Monagas</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <span class="contact-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                </span>
+                                <div>
+                                    <strong>Horario</strong>
+                                    <span>Todos los días, 11:30 a. m. – 5:30 p. m.</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <span class="contact-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                </span>
+                                <div>
+                                    <strong>Reservas y disponibilidad</strong>
+                                    <span><a href="https://wa.me/584249330252" target="_blank" rel="noopener">0424-9330252 por WhatsApp</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="visit-card reveal">
+                        <div class="visit-card-media">
+                            <img src="assets/img/local-exterior.jpg" alt="Fachada de Restaurant Mimma en Av. Rojas, Los Bloques" loading="lazy">
+                        </div>
+                        <div class="visit-card-body">
+                            <h3>Reserva tu mesa y comparte el momento.</h3>
+                            <p>Escríbenos para consultar disponibilidad, ubicación y detalles de tu visita. También puedes encontrarnos en Google Maps.</p>
+                            <a href="https://wa.me/584249330252" target="_blank" rel="noopener" class="button button-primary">Reservar por WhatsApp</a>
+                            <div class="card-links">
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Restaurant+Mimma+Av.+Rojas+201+Los+Bloques+Maturin" target="_blank" rel="noopener">Abrir en Maps</a>
+                                <a href="https://www.instagram.com/restaurantmimma/" target="_blank" rel="noopener">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="checkered-edge" aria-hidden="true"></div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#inicio" class="brand" aria-label="Volver al inicio">
+                        <span class="brand-mark"><img src="assets/img/logo-mimma.jpg" alt="" width="50" height="50"></span>
+                        <span>
+                            <span class="brand-name">MIMMA</span>
+                            <span class="brand-caption">Restaurant</span>
+                        </span>
+                    </a>
+                    <p class="footer-description">Recetas de la nonna, momentos para compartir y una mesa siempre lista para recibirte en el Sector Los Bloques.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Explora</h4>
+                    <a href="#historia">Nuestra historia</a>
+                    <a href="#sabores">Nuestros sabores</a>
+                    <a href="#menu">Menú</a>
+                    <a href="menu.html">Carta en libro</a>
+                    <a href="#visitanos">Visítanos</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Conecta</h4>
+                    <a href="https://www.instagram.com/restaurantmimma/" target="_blank" rel="noopener">Instagram @restaurantmimma</a>
+                    <a href="https://wa.me/584249330252" target="_blank" rel="noopener">WhatsApp 0424-9330252</a>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Restaurant+Mimma+Av.+Rojas+201+Los+Bloques+Maturin" target="_blank" rel="noopener">Google Maps</a>
+                    <p>Av. Rojas #201, Los Bloques, Maturín</p>
+                    <p>Todos los días · 11:30 a. m. – 5:30 p. m.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; <span id="currentYear"></span> Restaurant Mimma. Recetas de la nonna.</span>
+                <span>Maturín · Monagas · Venezuela</span>
+            </div>
+        </div>
+    </footer>
+
+    <a class="whatsapp-fab" href="https://wa.me/584249330252" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp a Restaurant Mimma">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.09 3.2 5.07 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 2.5A9.46 9.46 0 0 0 2.6 12c0 1.67.44 3.3 1.28 4.74L2.5 21.5l4.9-1.28a9.46 9.46 0 0 0 4.64 1.2h.01A9.46 9.46 0 0 0 21.5 12 9.46 9.46 0 0 0 12.04 2.5zm5.56 14.42c-.23.65-1.35 1.25-1.86 1.33-.5.08-1.13.11-1.82-.11-.42-.14-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.37-.14-.2-1.18-1.57-1.18-2.99 0-1.42.74-2.12 1-2.41.26-.29.57-.36.76-.36.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.57.81 1.98.88 2.12.07.14.12.31.02.5-.1.2-.15.31-.29.48-.15.17-.31.37-.44.5-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.02 1.12 1 2.07 1.31 2.36 1.46.29.15.46.12.63-.07.17-.2.73-.85.93-1.14.19-.29.39-.24.65-.14.26.1 1.66.78 1.95.92.29.15.48.22.55.34.07.12.07.69-.16 1.34z"/></svg>
+    </a>
+
+    <button class="back-to-top" id="backToTop" aria-label="Volver al inicio">&#8593;</button>
+
+    <script>
+        (function () {
+            "use strict";
+
+            var whatsappUrl = "https://wa.me/584249330252";
+            var mobileToggle = document.getElementById("mobileToggle");
+            var mainNav = document.getElementById("mainNav");
+            var backToTop = document.getElementById("backToTop");
+            var currentYear = document.getElementById("currentYear");
+            var menuList = document.getElementById("menuList");
+            var menuTabs = Array.prototype.slice.call(document.querySelectorAll(".menu-tab"));
+
+            currentYear.textContent = new Date().getFullYear();
+
+            /* ---------- Carta (adelanto) ---------- */
+            var categories = {
+                pastas: {
+                    title: "Pastas",
+                    items: [
+                        { name: "Pasticho", desc: "Horno, porción generosa", price: "9$" },
+                        { name: "Pasticho de berenjena", desc: "Versión de la casa", price: "9$" },
+                        { name: "Pasta con camarones", desc: "Especial de la nonna", price: "18$" },
+                        { name: "Pasta Napole", desc: "Clásico de Mimma", price: "6,5$" },
+                        { name: "Pasta boloñesa", desc: "Salsa de carne casera", price: "8$" },
+                        { name: "Pasta al horno", desc: "Gratinada al horno", price: "9$" },
+                        { name: "Pasta carbonara", desc: "Cremosa, con tocino", price: "11$" },
+                        { name: "Pasta alfredo", desc: "Salsa blanca de queso", price: "11$" }
+                    ]
+                },
+                pollos: {
+                    title: "Pollos",
+                    items: [
+                        { name: "Pollo a la plancha", desc: "Con su guarnición", price: "11$" },
+                        { name: "Pollo al champiñón", desc: "Salsa cremosa de champiñones", price: "15$" },
+                        { name: "Milanesa a la suiza", desc: "Empanizada y dorada", price: "15$" },
+                        { name: "Milanesa de pollo", desc: "Clásica de la casa", price: "11$" },
+                        { name: "Cordón bleu de pollo", desc: "Rellena y gratinada", price: "15$" },
+                        { name: "Parmesana de pollo", desc: "Con salsa y queso", price: "15,5$" },
+                        { name: "Pizzaiola de pollo", desc: "Estilo italiano", price: "15$" }
+                    ]
+                },
+                carnes: {
+                    title: "Carnes",
+                    items: [
+                        { name: "Lomito al champiñón", desc: "El favorito de la casa", price: "18$" },
+                        { name: "Lomito encebollado", desc: "Con cebolla caramelizada", price: "15$" },
+                        { name: "Lomito a la plancha", desc: "Jugoso, a tu gusto", price: "15$" },
+                        { name: "Asado negro", desc: "Receta venezolana de casa", price: "13$" },
+                        { name: "Milanesa de lomito", desc: "Empanizada", price: "15$" },
+                        { name: "Milanesa a la parmesana de lomito", desc: "Con salsa y queso", price: "18$" },
+                        { name: "Milanesa a la pizzaiola de lomito", desc: "Estilo trattoria", price: "18$" }
+                    ]
+                },
+                postres: {
+                    title: "Postres",
+                    items: [
+                        { name: "Quesillo", desc: "El postre venezolano de siempre", price: "4$" },
+                        { name: "Torta de chocolate", desc: "Porción generosa", price: "6$" },
+                        { name: "Torta de zanahoria", desc: "Casera", price: "6$" },
+                        { name: "Brookie", desc: "Brownie con galleta", price: "6$" },
+                        { name: "Marquesa", desc: "Chocolate y crema", price: "6$" },
+                        { name: "Tiramisú", desc: "Receta italiana", price: "6$" },
+                        { name: "Red velvet", desc: "Cremosa y suave", price: "6$" }
+                    ]
+                }
+            };
+
+            function renderMenu(key) {
+                var category = categories[key];
+                if (!category) return;
+                document.getElementById("menuTitle").textContent = category.title;
+                menuList.innerHTML = category.items.map(function (item) {
+                    return (
+                        '<div class="menu-item">' +
+                            '<div>' +
+                                '<span class="menu-item__name">' + item.name + '</span>' +
+                                '<span class="menu-item__desc">' + item.desc + '</span>' +
+                            '</div>' +
+                            '<span class="menu-item__fill" aria-hidden="true"></span>' +
+                            '<span class="menu-item__price">' + item.price + '</span>' +
+                        '</div>'
+                    );
+                }).join("");
+            }
+
+            menuTabs.forEach(function (tab) {
+                tab.addEventListener("click", function () {
+                    menuTabs.forEach(function (item) {
+                        item.classList.remove("active");
+                        item.setAttribute("aria-selected", "false");
+                    });
+                    tab.classList.add("active");
+                    tab.setAttribute("aria-selected", "true");
+                    renderMenu(tab.dataset.category);
+                });
+
+                tab.addEventListener("keydown", function (event) {
+                    if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+                    event.preventDefault();
+                    var index = menuTabs.indexOf(tab);
+                    var direction = event.key === "ArrowRight" ? 1 : -1;
+                    var next = (index + direction + menuTabs.length) % menuTabs.length;
+                    menuTabs[next].focus();
+                    menuTabs[next].click();
+                });
+            });
+
+            renderMenu("pastas");
+
+            /* ---------- Navegación móvil ---------- */
+            function closeNav() {
+                mainNav.classList.remove("open");
+                mobileToggle.setAttribute("aria-expanded", "false");
+                mobileToggle.setAttribute("aria-label", "Abrir menú de navegación");
+                document.body.classList.remove("nav-open");
+            }
+
+            mobileToggle.addEventListener("click", function () {
+                var isOpen = mainNav.classList.toggle("open");
+                mobileToggle.setAttribute("aria-expanded", String(isOpen));
+                mobileToggle.setAttribute("aria-label", isOpen ? "Cerrar menú de navegación" : "Abrir menú de navegación");
+                document.body.classList.toggle("nav-open", isOpen);
+            });
+
+            Array.prototype.forEach.call(mainNav.querySelectorAll("a"), function (link) {
+                link.addEventListener("click", closeNav);
+            });
+
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape") closeNav();
+            });
+
+            /* ---------- Animaciones al hacer scroll ---------- */
+            var revealElements = document.querySelectorAll(".reveal");
+            if ("IntersectionObserver" in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+                Array.prototype.forEach.call(revealElements, function (element) {
+                    observer.observe(element);
+                });
+            } else {
+                Array.prototype.forEach.call(revealElements, function (element) {
+                    element.classList.add("visible");
+                });
+            }
+
+            /* ---------- Resaltar sección activa ---------- */
+            var sections = Array.prototype.slice.call(document.querySelectorAll("main section[id]"));
+            var navAnchors = Array.prototype.slice.call(mainNav.querySelectorAll('a[href^="#"]'));
+
+            function setActiveLink() {
+                var position = window.scrollY + 140;
+                var currentId = "";
+                sections.forEach(function (section) {
+                    if (section.offsetTop <= position) currentId = section.id;
+                });
+                navAnchors.forEach(function (anchor) {
+                    anchor.classList.toggle("active", anchor.getAttribute("href") === "#" + currentId);
+                });
+            }
+
+            /* ---------- Botón volver arriba ---------- */
+            function handleScroll() {
+                backToTop.classList.toggle("visible", window.scrollY > 600);
+                setActiveLink();
+            }
+
+            window.addEventListener("scroll", handleScroll, { passive: true });
+            handleScroll();
+
+            backToTop.addEventListener("click", function () {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+
+            /* ---------- Utilidad WhatsApp (por si se amplía) ---------- */
+            window.MimmaWhatsapp = whatsappUrl;
+        })();
+    </script>
+</body>
+</html>
